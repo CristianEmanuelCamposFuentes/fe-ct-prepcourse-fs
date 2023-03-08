@@ -1,0 +1,24 @@
+function mayorMenor(numeros) {
+  // La función llamada 'mayorMenor' recibe como argumento un arreglo de números llamado 'numeros' y debe devolver un
+  // arreglo que contenga el mayor número del arreglo 'numeros' en la posición cero y el menor número del arreglo
+  // 'numeros' en la posición 1.
+  // Ej:
+  // mayorMenor([9, 17, 6, 2, 4]) debe retornar [17, 2]
+  // ya que 17 es el número más grande (mayor) dentro del arreglo [9, 17, 6, 2, 4]
+  // y 2 es el número más chico (menor) dentro del arreglo [9, 17, 6, 2, 4]
+
+  // Tu código aca:
+  var mayor = numeros[0];
+  for (var i = 0; i <= numeros.length-1; i++) {
+      if(mayor > numeros[i+1]) {
+        mayor = numeros[i+1];
+      }
+    }
+  var menor = numeros[0];
+  for (var j = 0; j <= numeros.length-1; j++) {
+      if(menor < numeros[j+1]){
+        menor = numeros[j+1];
+      }
+    }
+  return [mayor, menor];
+}
